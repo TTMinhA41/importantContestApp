@@ -39,5 +39,8 @@
 
 *{
     font-family: 'Montserrat';
-    --ion-background: var(--ion-background-color-step-100: #e6e6e6);
+}
+
+.body-page{
+    --ion-background-color: var(--ion-background-color-step-100);
 }
