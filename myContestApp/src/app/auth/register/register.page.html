@@ -1,0 +1,33 @@
+<ion-content class="body-page" [fullscreen]="true">
+  <div class="header">
+    <div class="header-toolbar">
+      <div (click)="goBack()" class="header-tool">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </div>
+      <div class="header-tool">
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </div>
+    </div>
+    <h1 class="page-title">TẠO TÀI KHOẢN</h1>
+  </div>
+  <div class="create-acc-body">
+    <form class="regis-form">
+      <ion-item class="form-item">
+        <ion-input class="regis-inp" placeholder="Email" type="email"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input class="regis-inp" placeholder="Họ và Tên" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input class="regis-inp" placeholder="Tên Người Dùng" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input class="regis-inp" placeholder="Mật Khẩu" type="password"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input class="regis-inp" placeholder="Nhập Lại Mật Khẩu" type="password"></ion-input>
+      </ion-item>
+      <ion-button class="regis-sub">Tạo tài khoản</ion-button>
+    </form>
+  </div>
+</ion-content>

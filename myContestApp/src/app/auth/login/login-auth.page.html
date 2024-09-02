@@ -1,0 +1,26 @@
+<meta name="apple-mobile-web-app-capable" content="yes">
+<ion-content class="body-page" [fullscreen]="true">
+  <div class="sub-layer"></div>
+  <div class="login-face">
+    <ion-icon class="app-icon" name="accessibility-outline"></ion-icon>
+    <h1 class="app-name">TÊN APP</h1>
+    <p class="app-slogan">...</p>
+  </div>
+  <div class="login-container">
+    <form class="login-form" [formGroup]="loginForm">
+      <ion-item class="form-item">
+        <ion-icon class="input-icon" name="person-circle-outline"></ion-icon>
+        <ion-input formControlName="phone" class="login-inp" placeholder="Số điện thoại" type="tel"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-icon class="input-icon" name="lock-closed-outline"></ion-icon>
+        <ion-input formControlName="password" class="login-inp" placeholder="Mật khẩu" type="password"></ion-input>
+      </ion-item>
+      <ion-button class="log-in-sub" (click)="logInTo()">Đăng Nhập</ion-button>
+      <ion-item class="no-acc">
+        <p class="no-acc-text">Không có tài Khoản</p>
+        <p class="no-acc-text create" (click)="routeToRegister()">Tạo một tài khoản</p>
+      </ion-item>
+    </form>
+  </div>
+</ion-content>

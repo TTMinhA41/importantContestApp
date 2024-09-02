@@ -1,0 +1,57 @@
+.header {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 25%;
+    border-radius: 0px 0px 35px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header-toolbar{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: white;
+        .header-tool{
+            padding: 34px 20px;
+            ion-icon{
+                font-size: 36px;
+            }
+        }
+    }
+    .page-title{
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 8px #737373;
+    }
+}
+.create-acc-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .regis-form {
+        width: 85%;
+        padding: 15% 5%;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        .form-item {
+            --ion-background-color: white;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            .regis-inp{
+                margin: 0 5%;
+                font-size: 18px;
+            }
+        }
+        .regis-sub{
+            --background: var(--main-color);
+            --border-radius: 50px;
+            height: 48px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}

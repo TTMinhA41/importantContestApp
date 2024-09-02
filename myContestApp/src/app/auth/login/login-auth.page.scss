@@ -1,5 +1,6 @@
 .body-page {
-    --ion-background-color: #00bf63;
+    --ion-background-color: var(--main-color);
+    --keyboard-offset: 0px !important;
 }
 
 .sub-layer {
@@ -16,13 +17,13 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    top: 18%;
+    top: 12%;
     height: 320px;
-    color: #00bf63;
+    color: var(--main-color);
 
     .app-icon {
-        width: 150px;
-        height: 150px;
+        width: 36.41%;
+        height: 36.41%;
     }
 
     .app-name {
@@ -41,17 +42,19 @@
     display: flex;
     position: absolute;
     justify-content: center;
-    bottom: 20%;
+    bottom: 14%;
 
     .login-form {
         width: 85%;
         padding: 10% 8%;
         background-color: white;
         border-radius: 15px;
-
+        display: flex;
+        flex-direction: column;
         .form-item {
             --ion-background-color: var(--ion-background-color-step-100);
             border-radius: 50px;
+            margin-bottom: 30px;    
             .input-icon{
                 height: 32px;
                 width: 32px;
@@ -59,9 +62,20 @@
                 padding-right: 8px;
             }
         }
-
-        .form-item:first-child {
-            margin-bottom: 30px;
+        .log-in-sub{
+            --background: var(--main-color);
+            --border-radius: 50px;
+        }
+        .no-acc{
+            --background: none;
+            display: flex;
+            .no-acc-text{
+                font-size: 12px;
+            }
+            .no-acc-text.create{
+                color: var(--main-color);
+                padding-left: 9%;
+            }
         }
     }
 
