@@ -1,3 +1,55 @@
-.home-header{
-    background-color: #00bf63;
+.map-bubble{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .search-native{
+        width: calc(90% + 16px);
+        .search-bar{
+            --border-radius: 50px;
+            --background: var(--ion-background-color)
+        }
+    }
+    .result-block{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 25px;
+        overflow: hidden;
+        .results-items {
+            background-color: var(--ion-background-color);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: 100%;
+            .locate-icon {
+                font-size: 25px;
+                padding: 12px;
+            }
+        
+            .results {
+                margin: 0;
+                font-size: 18px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                padding: 14px 4px;
+                width: 75%;
+            }
+        }
+    }
+    .marked-container{
+        width: 85%;
+        background-color: var(--ion-background-color);
+        margin: 12px 0;
+        border-radius: 50px;
+        padding: 4px 20px;
+        .marked-name{
+            text-align: center;
+        }
+    }
 }

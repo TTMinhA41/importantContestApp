@@ -11,21 +11,21 @@
     <h1 class="page-title">TẠO TÀI KHOẢN</h1>
   </div>
   <div class="create-acc-body">
-    <form class="regis-form">
+    <form [formGroup]="registerForm" class="regis-form">
       <ion-item class="form-item">
-        <ion-input class="regis-inp" placeholder="Email" type="email"></ion-input>
+        <ion-input class="regis-inp" formControlName="email" placeholder="Email" type="email"></ion-input>
       </ion-item>
       <ion-item class="form-item">
-        <ion-input class="regis-inp" placeholder="Họ và Tên" type="text"></ion-input>
+        <ion-input class="regis-inp" formControlName="name" placeholder="Họ và Tên" type="text"></ion-input>
       </ion-item>
       <ion-item class="form-item">
-        <ion-input class="regis-inp" placeholder="Tên Người Dùng" type="text"></ion-input>
+        <ion-input class="regis-inp" formControlName="username" placeholder="Tên Người Dùng" type="text"></ion-input>
       </ion-item>
       <ion-item class="form-item">
-        <ion-input class="regis-inp" placeholder="Mật Khẩu" type="password"></ion-input>
+        <ion-input class="regis-inp" formControlName="password" placeholder="Mật Khẩu" type="password"></ion-input>
       </ion-item>
       <ion-item class="form-item">
-        <ion-input class="regis-inp" placeholder="Nhập Lại Mật Khẩu" type="password"></ion-input>
+        <ion-input class="regis-inp" formControlName="confirmPassword" placeholder="Nhập Lại Mật Khẩu" type="password"></ion-input>
       </ion-item>
       <ion-button class="regis-sub">Tạo tài khoản</ion-button>
     </form>
