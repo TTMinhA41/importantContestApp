@@ -1,10 +1,10 @@
 <ion-content [fullscreen]="true">
-  <div class="map-bubble">
+  <div class="on-map map-bubble">
     <div class="search-native">
       <ion-searchbar class="search-bar" (ionInput)="changeLocateSearch($event)"></ion-searchbar>
     </div>
     <div class="result-block">
-      <div (click)="markToResult(i.place_id)" class="results-items" *ngFor="let i of foundPlaces">
+      <div (click)="idToResult(i.place_id)" class="results-items" *ngFor="let i of foundPlaces">
         <ion-icon class="locate-icon" name="search-outline"></ion-icon>
         <p class="results">{{i.description}}</p>
       </div>
@@ -13,5 +13,14 @@
       <p class="marked-name" *ngIf="markerPlace">{{markerPlace.formatted_address}}</p>
     </div>
   </div>
-  <div id="map" class="google-map" style="height: 100%;"></div>
+
+  <div id="map" class="google-map" style="height: calc(75% - 109px)"></div>
+
+  <div class="on-map locate-slider">
+    <swiper-container class="locations-container" slides-per-view="1" loop="true" space-between="6">
+      <swiper-slide class="locate-slides" (click)="latLngToResult(i.lat, i.lng)" *ngFor="let i of recommLocations">
+        <img src="{{i.faces}}" alt="{{i.name}}">
+      </swiper-slide>
+    </swiper-container>
+  </div>
 </ion-content>

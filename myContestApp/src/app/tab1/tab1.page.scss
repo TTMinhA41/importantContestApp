@@ -1,10 +1,12 @@
-.map-bubble{
-    position: absolute;
+.on-map{
     z-index: 1;
+    width: 100%;
+}
+
+.on-map.map-bubble{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 
     .search-native{
         width: calc(90% + 16px);
@@ -50,6 +52,17 @@
         padding: 4px 20px;
         .marked-name{
             text-align: center;
+        }
+    }
+}
+.on-map.locate-slider{
+    height: 25%;
+    .locations-container{
+        height: 100%;
+        padding: 35px 12px;
+        .locate-slides{
+            border-radius: 10px;
+            overflow: hidden;
         }
     }
 }

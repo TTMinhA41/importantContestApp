@@ -32,6 +32,7 @@ export class LoginAuthPage implements OnInit {
     
     if( toPhone === bePhone && toPass === bePass){
       console.log("Logined");
+      this.router.navigate(['/tabs/tab1']);
     }
     else{
       console.log("Failed");

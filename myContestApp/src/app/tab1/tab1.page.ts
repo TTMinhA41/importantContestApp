@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GoongService } from '../@app-core/http/goong/goong.service';
 import { Geolocation } from '@capacitor/geolocation';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 import { NgZone } from '@angular/core';
 
@@ -19,6 +22,24 @@ export class Tab1Page implements OnInit {
     lat: 0,
     lng: 0
   };
+  recommLocations: any = [
+    {
+      id: 1,
+      name: "Place1",
+      place_id: "D-pFvbIhgsprtVVspTbKrnLEQWqybo-tbYkiZYpFoq5y3Hc3vW-QlG7L0d0m5fYCEXDVrlYlHjBJqiEEwuhick3H_JhqmG6KsaOVaTox8jJZpjEkauhqcvmvMQTGMG_eg",
+      faces: "https://images6.alphacoders.com/133/thumb-1920-1335411.png",
+      lat: 12.451545,
+      lng: 107.624807
+    },
+    {
+      id: 2,
+      name: "Place2",
+      place_id: "D-pFvbIhgsprtVVspTbKrnLEQWqybo-tbYkiZYpFoq5y3Hc3vW-QlG7L0d0m5fYCEXDVrlYlHjBJqiEEwuhick3H_JhqmG6KsaOVaTox8jJZpjEkauhqcvmvMQTGMG_eg",
+      faces: "https://images6.alphacoders.com/133/thumb-1920-1335411.png",
+      lat: 11.987469, 
+      lng: 109.186682
+    }
+  ]
 
   apiKey = "moh7iGN6X9muXFV9wcXkwFSi5xj7CeSJYzwBM98Q";
 
@@ -103,7 +124,7 @@ export class Tab1Page implements OnInit {
       marker.setPosition(this.map.getCenter());
     });
   };
-  markToResult(pos: any){
+  idToResult(pos: any){
     console.log(pos);
     
     this.goong.getId(this.apiKey, pos).subscribe({
@@ -112,5 +133,8 @@ export class Tab1Page implements OnInit {
         this.loadMap(data.result.geometry.location.lat, data.result.geometry.location.lng)
       }
     })
+  }
+  latLngToResult(lat: any, lng: any){
+    this.loadMap(lat, lng)
   }
 }
